@@ -6,3 +6,6 @@ dist/
 venv/
 *.pem
 *.docx
+100Set/
+.vscode/
+__pycache__/
