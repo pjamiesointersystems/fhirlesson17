@@ -1,0 +1,60 @@
+Starting resource summarization...
+Executing query for patient_id=2, resource_type='Patient'
+Row 0 for Patient accepted: 'Resourcetype: Patient\nId: 2\nText: Status: generated\nText: Div: <div xmlns="http://www.w3.org/199
+Texts for Patient: count = 1
+Executing query for patient_id=2, resource_type='Condition'
+Row 0 for Condition accepted: 'Resourcetype: Condition\nId: 45\nClinicalstatus: Coding: System: http://terminology.hl7.org/CodeSys
+Row 1 for Condition accepted: 'Resourcetype: Condition\nId: 161\nClinicalstatus: Coding: System: http://terminology.hl7.org/CodeSy
+Skipping row 2 for Condition — type: <class 'NoneType'>
+Row fetch error at index 3 for Condition: TypeError: can only concatenate str (not "int") to str
+Texts for Condition: count = 2
+Executing query for patient_id=2, resource_type='MedicationRequest'
+Row 0 for MedicationRequest accepted: 'Resourcetype: MedicationRequest\nId: 227\nStatus: stopped\nIntent: order\nMedicationcodeableconcept
+Row 1 for MedicationRequest accepted: 'Resourcetype: MedicationRequest\nId: 490\nStatus: stopped\nIntent: order\nMedicationcodeableconcept
+Skipping row 2 for MedicationRequest — type: <class 'int'>
+Row fetch error at index 3 for MedicationRequest: TypeError: can only concatenate str (not "int") to str
+Texts for MedicationRequest: count = 2
+Executing query for patient_id=2, resource_type='Observation'
+Row 0 for Observation accepted: 'Resourcetype: Observation\nId: 162\nStatus: final\nCategory: Coding: System: http://terminology.hl7
+Row 1 for Observation accepted: 'Resourcetype: Observation\nId: 163\nStatus: final\nCategory: Coding: System: http://terminology.hl7
+Row fetch error at index 2 for Observation: TypeError: can only concatenate str (not "int") to str
+Texts for Observation: count = 2
+Executing query for patient_id=2, resource_type='Encounter'
+Row 0 for Encounter accepted: 'Resourcetype: Encounter\nId: 20\nStatus: finished\nClass: System: http://terminology.hl7.org/CodeSy
+Row 1 for Encounter accepted: 'Resourcetype: Encounter\nId: 48\nStatus: finished\nClass: System: http://terminology.hl7.org/CodeSy
+Row fetch error at index 2 for Encounter: TypeError: can only concatenate str (not "int") to str
+Texts for Encounter: count = 2
+Executing query for patient_id=2, resource_type='Practitioner'
+Row 0 for Practitioner accepted: 'Resourcetype: Practitioner\nId: 19\nIdentifier: System: http://hl7.org/fhir/sid/us-npi\nIdentifier:
+Row 1 for Practitioner accepted: 'Resourcetype: Practitioner\nId: 235\nIdentifier: System: http://hl7.org/fhir/sid/us-npi\nIdentifier
+Row fetch error at index 2 for Practitioner: TypeError: can only concatenate str (not "int") to str
+Texts for Practitioner: count = 2
+Executing query for patient_id=2, resource_type='Procedure'
+Row 0 for Procedure accepted: 'Resourcetype: Procedure\nId: 1042\nStatus: completed\nCode: Coding: System: http://snomed.info/sct\
+Row 1 for Procedure accepted: 'Resourcetype: Procedure\nId: 1076\nStatus: completed\nCode: Coding: System: http://snomed.info/sct\
+Row 2 for Procedure accepted: '\x01Resourcetype: Procedure\nId: 1076\nStatus: completed\nCode: Coding: System: http://snomed.info/
+Row fetch error at index 3 for Procedure: TypeError: can only concatenate str (not "int") to str
+Texts for Procedure: count = 3
+Executing query for patient_id=2, resource_type='AllergyIntolerance'
+Texts for AllergyIntolerance: count = 0
+Executing query for patient_id=2, resource_type='Immunization'
+Row 0 for Immunization accepted: 'Resourcetype: Immunization\nId: 229\nStatus: completed\nVaccinecode: Coding: System: http://hl7.org
+Row 1 for Immunization accepted: 'Resourcetype: Immunization\nId: 492\nStatus: completed\nVaccinecode: Coding: System: http://hl7.org
+Row 2 for Immunization accepted: '\x01Resourcetype: Immunization\nId: 492\nStatus: completed\nVaccinecode: Coding: System: http://hl7
+Row fetch error at index 3 for Immunization: TypeError: can only concatenate str (not "int") to str
+Texts for Immunization: count = 3
+Executing query for patient_id=2, resource_type='DiagnosticReport'
+Row 0 for DiagnosticReport accepted: 'Resourcetype: DiagnosticReport\nId: 1049\nStatus: final\nCategory: Coding: System: http://terminolo
+Row 1 for DiagnosticReport accepted: 'Resourcetype: DiagnosticReport\nId: 2177\nStatus: final\nCategory: Coding: System: http://terminolo
+Skipping row 2 for DiagnosticReport — type: <class 'decimal.Decimal'>
+Row fetch error at index 3 for DiagnosticReport: TypeError: can only concatenate str (not "int") to str
+Texts for DiagnosticReport: count = 2
+Executing query for patient_id=2, resource_type='DocumentReference'
+Texts for DocumentReference: count = 0
+Executing query for patient_id=2, resource_type='CarePlan'
+Row 0 for CarePlan accepted: 'Resourcetype: CarePlan\nId: 231\nText: Status: generated\nText: Div: <div xmlns="http://www.w3.org/
+Row 1 for CarePlan accepted: 'Resourcetype: CarePlan\nId: 2204\nText: Status: generated\nText: Div: <div xmlns="http://www.w3.org
+Row fetch error at index 2 for CarePlan: TypeError: can only concatenate str (not "int") to str
+Texts for CarePlan: count = 2
+Generating final summary from combined partials...
+Final summary displayed.
