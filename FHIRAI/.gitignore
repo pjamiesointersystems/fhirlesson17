@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+.env
+dist/
+venv/
+*.pem
+100Set/
+.vscode/
+__pycache__/
+
+# Exclude Office temp files
+~$*

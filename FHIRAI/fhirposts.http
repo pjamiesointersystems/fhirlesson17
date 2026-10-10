@@ -1,0 +1,334 @@
+###
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/metadata
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+###
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient/2
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+###
+
+###
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/StructureDefinition
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+
+
+
+###
+POST http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient/$validate?profile=http://iscfhir.com/healthrisk/StructureDefinition/patient-with-health-risk|0.1.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "system": "http://hospital.smarthealth.org/mrn",
+      "value": "123456"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": ["Jane"]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-555-5555",
+      "use": "mobile"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-04-10",
+  "address": [
+    {
+      "use": "home",
+      "line": ["123 Main St"],
+      "city": "Springfield",
+      "state": "MA",
+      "postalCode": "01103",
+      "country": "USA"
+    }
+  ]
+}
+###
+
+###
+POST http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient/$validate?profile=http://iscfhir.com/DemoPatientIG/StructureDefinition/DemoPatient|0.1.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "system": "http://hospital.smarthealth.org/mrn",
+      "value": "123456"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": ["Jane"]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-555-5555",
+      "use": "mobile"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-04-10",
+  "address": [
+    {
+      "use": "home",
+      "line": ["123 Main St"],
+      "city": "Springfield",
+      "state": "MA",
+      "postalCode": "01103",
+      "country": "USA"
+    }
+  ]
+}
+###
+
+###
+POST http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient/$validate?profile=http://iscfhir.com/DemoPatientIG/StructureDefinition/DemoPatient|0.1.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+{
+  "resourceType": "Patient",
+  "extension": [
+    {
+      "url": "http://iscfhir.com/DemoPatientIG/StructureDefinition/favorite-color-ext",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://iscfhir.com/DemoPatientIG/CodeSystem/favorite-colors-cs",
+            "code": "blue",
+            "display": "Blue"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://hospital.smarthealth.org/mrn",
+      "value": "123456"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": ["Jane"]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-555-5555",
+      "use": "mobile"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-04-10",
+  "address": [
+    {
+      "use": "home",
+      "line": ["123 Main St"],
+      "city": "Springfield",
+      "state": "MA",
+      "postalCode": "01103",
+      "country": "USA"
+    }
+  ]
+}
+###
+
+###
+POST http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient/$validate?profile=http://iscfhir.com/healthrisk/StructureDefinition/patient-with-health-risk|0.1.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "system": "http://hospital.smarthealth.org/mrn",
+      "value": "123456"
+    }
+  ],
+   "meta": {
+    "profile": [
+      "http://iscfhir.com/StructureDefinition/patient-with-health-risk"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://iscfhir.com/StructureDefinition/health-risk-extension",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://iscfhir.com/healthrisk",
+            "code": "low",
+            "display": "Low"
+          }
+        ],
+        "text": "Low"
+      }
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": ["Jane"]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-555-5555",
+      "use": "mobile"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-04-10",
+  "address": [
+    {
+      "use": "home",
+      "line": ["123 Main St"],
+      "city": "Springfield",
+      "state": "MA",
+      "postalCode": "01103",
+      "country": "USA"
+    }
+  ]
+}
+###
+
+###
+POST http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient/$validate?profile=http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|3.1.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+{
+  "resourceType": "Patient",
+  "identifier": [
+    {
+      "system": "http://hospital.smarthealth.org/mrn",
+      "value": "123456"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Doe",
+      "given": ["Jane"]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-555-5555",
+      "use": "mobile"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1985-04-10",
+  "address": [
+    {
+      "use": "home",
+      "line": ["123 Main St"],
+      "city": "Springfield",
+      "state": "MA",
+      "postalCode": "01103",
+      "country": "USA"
+    }
+  ]
+}
+###
+
+
+##
+POST http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/Patient/$validate?profile=http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|3.1.0
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+{
+  "resourceType": "Patient",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|3.1.0"
+    ]
+  },
+  "name": [
+    {
+      "family": "Smith"
+      // Missing 'given' names
+    }
+  ],
+  // Missing gender
+  // Missing birthDate
+  "address": [
+    {
+      "line": ["456 Elm St"],
+      "city": "Boston"
+      // Missing state and postalCode
+    }
+  ]
+}
+###
+
+
+
+##
+GET http://127.0.0.1:8080/csp/healthshare/demo/fhir/r4/StructureDefintion
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+
+###
+

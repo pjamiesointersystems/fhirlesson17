@@ -1,0 +1,18 @@
+[project]
+name = "fhirai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "einops>=0.8.2",
+    "fhir-resources==6.1.0",
+    "fhirpathpy>=2.1.0",
+    "intersystems-irispython>=5.3.2",
+    "lmstudio>=1.5.0",
+    "pydantic<2.0",
+    "requests>=2.20.0,<3.0.0",
+    "sentence-transformers>=5.4.1",
+    "textual==0.44.1",
+    "tiktoken>=0.12.0",
+]

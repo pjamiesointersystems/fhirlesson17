@@ -1,0 +1,79 @@
+
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/info
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+
+
+###
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/namespaces
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+###
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/endpoints?namespace=demo
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+# these next rest call are related to server managment
+GET http://fhir.cloudintersystems.com/csp/fhir-management/api/endpoints?namespace=demo
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+###
+###
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/packages?namespace=demo
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+# these next rest call are related to server managment
+GET http://fhir.cloudintersystems.com/csp/fhir-management/api/packages?namespace=demo
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+###
+# these next rest call are related to server managment
+GET http://127.0.0.1:8080/csp/fhir-management/api/packages?namespace=demo
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+GET http://127.0.0.1:8080/csp/fhir-management/api/packages?namespace=demo&id=hl7.fhir.r4.core@4.0.1
+Authorization: Basic _System:ISCDEMO
+Accept: */*
+content-type: application/fhir+json
+Accept-Encoding: gzip, deflate, br
+Prefer: return=representation
+###
+
+###
+
+###
