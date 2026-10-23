@@ -18,5 +18,15 @@ venv/
 # Large data
 FHIRAI/100Set/
 
+# Office documents
+*.docx
+*.pptx
+
 # Temporary Office files
 ~$*
+
+# BMAD planning output
+bmad-output/
+
+# Claude config
+.claude/
